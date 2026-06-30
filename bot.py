@@ -5,7 +5,7 @@ from telegram.ext import Application, ChatJoinRequestHandler
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-BOT_TOKEN = "8949333597:AAFm6fM1JFkWJzWhzONUF8U3GDqupejCQF8"
+BOT_TOKEN = "8230546051:AAG6c8PDOh0FSla3HiHvXuinneumnmOUdok"
 CHANNEL_ID = -1002182251619
 IMAGE_URL = "https://ibb.co/B5QXY1B8/photo-2026-05-15-22-03-17.jpg"
 
