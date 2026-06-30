@@ -35,8 +35,11 @@ async def handle_join_request(update, context):
     except Exception as e:
         logger.error(f"Error: {e}")
 
+async def post_init(application):
+    await application.bot.delete_webhook(drop_pending_updates=True)
+
 def main():
-    app = Application.builder().token(BOT_TOKEN).build()
+    app = Application.builder().token(BOT_TOKEN).post_init(post_init).build()
     app.add_handler(ChatJoinRequestHandler(handle_join_request))
     logger.info("Bot started 24/7!")
     app.run_polling(drop_pending_updates=True)
